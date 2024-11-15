@@ -26,6 +26,10 @@ git commit -m 'сообщение'
 ```bash
 git log
 ```
+- Получить сокращённый лог
+```bash
+git log --oneline
+```
 - Генерация SSH-ключа  
 ```bash
 ssh-keygen -t ed25519 -C "электронная почта"
@@ -36,7 +40,7 @@ ssh -T git@github.com
 ```
 - Привязка удалённого репозитория к локальному  
 ```bash
-*git remote add* origin git@github.com:%имя-аккаунта%/first-project.git
+git remote add origin git@github.com:%имя-аккаунта%/first-project.git
 ```
 - Проверка связанности репозиториев  
 ```bash
@@ -46,3 +50,15 @@ git remote -v
 ```bash
 git push -u origin main
 ```
+## Структура  
+### Что хранится в папке .git  
+- файл HEAD  
+в нём хранится ссылка на последний коммит
+### Статусы  
+* untracked  
+неотслеживаемые файлы
+* tracked
+отслеживаемые файлы, которые были зафиксированы с помощью commit или add
+* staged (indexed, cached)  
+подготовленный (после выполнения команды git add)
+* modified
