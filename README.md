@@ -57,7 +57,7 @@ git push -u origin main
 ### Статусы  
 * untracked  
 неотслеживаемые файлы
-* tracked
+* tracked  
 отслеживаемые файлы, которые были зафиксированы с помощью commit или add
 * staged (indexed, cached)  
 подготовленный (после выполнения команды git add)
